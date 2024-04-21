@@ -1,0 +1,8 @@
+
+
+.joker {
+    background: url("../../assets/image/Joker-Desktop-Wallpaper.jpg");
+    background-size: cover; /* جعل الصورة تمتد لتغطية العنصر بالكامل */
+    background-position: center center; /* توسيط الصورة داخل العنصر */
+    background-repeat: no-repeat;
+}
