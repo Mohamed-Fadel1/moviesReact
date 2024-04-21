@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet';
 
 export default function MoviesDetaiels() {
 
@@ -83,6 +84,13 @@ if (loading ) return <Loading/>
  </div>
      </div>
    
+
+
+     <Helmet>
+             
+             <title> Detailes movies </title>
+            
+         </Helmet>
       </div>
     )
 }

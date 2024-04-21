@@ -35,7 +35,7 @@ export default function Register() {
 
 
   const validationSchema = Yup.object({
-    name:Yup.string().min(3,"name is too short").max(10,"name is too short").required("name is required"),
+    name:Yup.string().min(3,"name is too short").max(10,"name is too long").required("name is required"),
     email:Yup.string().email("email not valid").required("email is required"),
     password:Yup.string().matches(/^[A-Z][a-z0-9]{4,8}$/, "invalid password").required("password is required"),
     rePassword: Yup.string().oneOf([Yup.ref("password")] , "passowrd and rePassowrd should be match").required("rePassword is required") ,
@@ -58,10 +58,9 @@ export default function Register() {
   return (
  <>
 
-<div className=' w-50 m-auto py-3 '>
+<div className=' w-50 m-auto py-3 form '>
   <h2 className="mt-5" >Register Now :</h2>
-  { errMessage ? <div className='alert alert-danger '> {errMessage } </div>:null  }
-
+  {errMessage ? <Alert severity="error">{errMessage}</Alert> : null}
   <form onSubmit={registerFormik.handleSubmit}>
     <div className="form-group">
       <label htmlFor="fullName">  name </label>

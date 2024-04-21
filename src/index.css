@@ -74,9 +74,13 @@ padding-top: 100px;
   } 
   .Scale-Image:hover {
     transform: scale(1.07);
-  }
+  } 
 
+  .Carousel {
+    margin-top: 100px;
+  }
 }
+
 
 
 @media only screen and (max-width: 1030px) {

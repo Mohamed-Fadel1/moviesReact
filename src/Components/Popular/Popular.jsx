@@ -5,6 +5,7 @@ import axios from "axios";
 import { GlobalContext } from "../../Context/GlobalContext";
 import { useTheme } from "@emotion/react";
 import { Carousel } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 export default function Popular() {
 
@@ -38,7 +39,7 @@ const theme = useTheme()
 
   return (
     <>
-       <Carousel interval={2000} controls={false} indicators={false} pause={false}>
+       <Carousel className="Carousel" interval={2000} controls={false} indicators={false} pause={false}>
           {popularMovies.map((img) => (
             <Carousel.Item key={img.id}>
               <div className="position-relative">
@@ -84,6 +85,11 @@ const theme = useTheme()
             ))}
         </div>
       </div>
+      <Helmet>
+             
+                <title> popular movies </title>
+               
+            </Helmet>
     </>
   );
 }

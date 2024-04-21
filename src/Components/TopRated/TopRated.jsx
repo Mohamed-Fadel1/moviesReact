@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import { Helmet } from "react-helmet";
 
 export default function TopRated() {
   const [topRatedMovies, settopRatedMovies] = useState([]);
@@ -81,7 +82,14 @@ export default function TopRated() {
             ))}
         </div>
       </div>
-      
+
+
+
+      <Helmet>
+             
+             <title> Top Rated movies </title>
+            
+         </Helmet>
     </>
   );
 }

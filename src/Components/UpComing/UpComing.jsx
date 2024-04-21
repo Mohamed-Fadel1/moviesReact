@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import { Helmet } from "react-helmet";
 
 export default function TopRated() {
   const [upComing, setUpComing] = useState([]);
@@ -75,13 +76,17 @@ export default function TopRated() {
                     className="w-100"
                     alt={movie.title}
                   />
-                  <h4 className="text-decoration-none text-cente  ">{movie.original_title}</h4>
+                  <h4 className="text-decoration-none text-cente fs-6 card-footer bg-danger   ">{movie.original_title}</h4>
                 </Link>
               </div>
             ))}
         </div>
       </div>
-      
+      <Helmet>
+             
+             <title> upComing movies </title>
+            
+         </Helmet>
     </>
   );
 }
